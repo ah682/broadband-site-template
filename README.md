@@ -1,75 +1,26 @@
-# SupaBroadband WordPress Theme
+# SupaBroadband WordPress theme
 
-Custom WordPress theme for SupaBroadband internet service provider website.
+An Astra child theme for a broadband comparison site. It includes plan listings,
+filters, comparison tables, enquiry pages and a mock speed-test widget.
 
-## Requirements
+## Install
 
-- WordPress 5.0 or higher
-- PHP 7.4 or higher
-- MySQL 5.6 or higher
-- Astra parent theme
+Start with a working WordPress installation and the Astra parent theme.
 
-## Installation
+1. Copy `app/public/wp-content/themes/astra-child/` into your WordPress
+   `wp-content/themes/` directory.
+2. Activate **Astra Child** under **Appearance → Themes**.
+3. Set permalinks to **Post name** under **Settings → Permalinks**.
+4. Create the pages and add plans using the [theme setup guide](app/public/wp-content/themes/astra-child/README.md).
 
-### 1. Install WordPress
+The enquiry page renders its page content, so it can use a Contact Form 7 shortcode.
+Configure that plugin separately if you want to receive enquiries.
 
-Set up a fresh WordPress installation on your hosting environment.
+## Theme files
 
-### 2. Install Astra Parent Theme
+The child theme contains templates for the homepage, plans, comparison, enquiry,
+contact, getting started, cookies and terms pages. Plan fields and shortcodes live
+in `functions.php`; filtering and sorting live in `assets/js/filter-sort.js`.
 
-Download and install the Astra theme from WordPress.org or via the WordPress admin dashboard:
-- Go to Appearance > Themes > Add New
-- Search for "Astra"
-- Install and activate
-
-### 3. Install Child Theme
-
-Upload the `astra-child` folder to your `wp-content/themes/` directory.
-
-Activate the Astra Child theme from Appearance > Themes.
-
-### 4. Import Database
-
-If migrating from an existing site:
-- Export the database from your source environment
-- Import into your target database using phpMyAdmin or similar tool
-- Update site URLs in wp_options table if needed
-
-### 5. Configure Site
-
-- Set permalinks to "Post name" under Settings > Permalinks
-- Configure theme settings as needed
-- Create pages and assign templates
-
-## Theme Structure
-
-The child theme includes custom templates for:
-- Home page
-- Broadband plans comparison
-- How to Get Started
-- Contact Us
-- Cookie Policy
-- Terms and Conditions
-- Blog archive
-
-## Custom Features
-
-- Speed test widget
-- Broadband plan comparison tables
-- Custom page templates
-- Responsive design optimized for mobile
-- Custom CSS organized in modular files
-
-## Development
-
-The theme uses a modular CSS structure:
-- base/ - Layout and foundational styles
-- components/ - Reusable UI components
-- sections/ - Page section styles
-- pages/ - Page-specific styles
-- utilities/ - Helper classes and animations
-- variables/ - CSS custom properties
-
-## Support
-
-For issues or questions, refer to the WordPress Codex or Astra theme documentation.
+CSS is split into variables, base styles, components, sections, pages and utilities
+under `assets/css/`. Edit the child theme rather than the Astra parent theme.
